@@ -48,10 +48,14 @@ class App extends React.Component {
             type="text"
           ></textarea>
         </div>
-        <div
-          id="preview"
-          dangerouslySetInnerHTML={this.getMarkdownText()}
-        ></div>
+        <div className="preview">
+          <p className="preview__header">Preview</p>
+          <div
+            id="preview"
+            className="preview__view"
+            dangerouslySetInnerHTML={this.getMarkdownText()}
+          ></div>
+        </div>
       </div>
     );
   }
