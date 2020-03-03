@@ -1,5 +1,6 @@
 {
   "name": "markdown2",
+  "homepage": "https://MatyD356.github.io/markdown",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +12,8 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
+    "predeply": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -32,6 +35,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "marked": "^0.8.0"
   }
 }
