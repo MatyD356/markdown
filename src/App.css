@@ -1,5 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 .App {
-  text-align: center;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -8,4 +11,29 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 2vh;
+}
+.editor {
+  border: 5px solid #61dafb;
+  min-width: 25vw;
+  min-height: 50vh;
+  margin: 5vh;
+  max-width: 1000px;
+  max-height: 1000px;
+}
+.editor__header {
+  padding: 2vh;
+}
+.editor__textArea {
+  padding: 2vh;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 900px;
+  min-height: 700px;
+}
+#preview {
+  background-color: #242424;
+  border: 5px solid #61dafb;
+  min-width: 75vw;
+  min-height: 50vh;
 }
