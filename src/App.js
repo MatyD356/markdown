@@ -13,8 +13,8 @@ class App extends React.Component {
       input: ``
     };
   }
-
   getMarkdownText() {
+
     const rawMarkup = marked(this.state.input);
     return { __html: rawMarkup };
   }
@@ -26,13 +26,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src =
-      "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
-    document.body.appendChild(script);
     document.getElementById("editor").value = placeholder;
     document.getElementById("preview").innerHTML = marked(placeholder);
+    marked.setOptions({
+      breaks: true,
+      gfm: true
+    })
   }
 
   render() {
